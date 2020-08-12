@@ -1,0 +1,44 @@
+<div class="container">
+  <br><br>
+
+  <div class="logo center">
+    <img src="../assets/img/logo.png" width="150">
+    <p class="my-0 grey-text text-darken-3">Bubbles & Clothes Laundryshop</p>
+  </div>
+
+  <br>
+
+  <div class="col s12">
+    <div class="card-panel z-depth">
+      <form method="POST" action="../php/api.php?SubmitInfo">
+
+        <h5 class="center-align mb-0 grey-text text-darken-3">Do your transaction</h5>
+        <p class="center-align mb-3 grey-text text-darken-3">Reserve available time you want:</p>
+
+        <div class="input-field col s12">
+          <select>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="8:00am - 8:30am">8:00am - 8:30am</option>
+            <option value="9:00am - 9:30am">9:00am - 9:30am</option>
+            <option value="10:00am - 10:30am">10:00am - 10:30am</option>
+            <option value="11:00am - 11:30am">11:00am - 11:30am</option>
+            <option value="12:00pm - 12:30pm">12:00pm - 12:30pm</option>
+            <option value="1:00pm - 1:30pm">1:00pm - 1:30pm</option>
+            <option value="2:00pm - 2:30pm">2:00pm - 2:30pm</option>
+            <option value="3:00pm - 3:30pm">3:00pm - 3:30pm</option>
+            <option value="4:00pm - 4:30pm">4:00pm - 4:30pm</option>
+          </select>
+          <label>Select what time you want:</label>
+        </div>
+
+        <br>
+        <div class="row">
+          <a class="btn-small light-blue darken-4 waves-effect right" href="#updateinfo">Continue</a>
+          <a class="btn-small btn-flat blue-text left" href="#date">Back</a>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>

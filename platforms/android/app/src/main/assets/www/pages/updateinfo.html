@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="logo center">
+    <img src="../assets/img/logo.png" width="150">
+    <p class="my-0 grey-text text-darken-3">Bubbles & Clothes Laundryshop</p>
+  </div>
+
+  <br>
+
+  <div class="col s12">
+    <div class="card-panel z-depth">
+      <form method="POST" action="../php/api.php?SubmitInfo">
+
+        <h5 class="center-align mb-0 grey-text text-darken-3">Do your transaction</h5>
+        <p class="center-align mb-3 grey-text text-darken-3">Kindly provide your details in this form:</p>
+
+        <div class="input-field mx-2">
+          <i class="mdi mdi-account mdi-24px prefix grey-text text-darken-2"></i>
+          <input type="text" id="cu_fname" name="cu_fname" maxlength="50" required>
+          <label for="cu_fname">First Name</label>
+        </div>
+
+        <div class="input-field mx-2">
+          <i class="mdi mdi-account mdi-24px prefix grey-text text-darken-2"></i>
+          <input type="text" id="cu_mname" name="cu_mname" maxlength="25" required>
+          <label for="cu_mname">Middle Name</label>
+        </div>
+
+        <div class="input-field mx-2">
+          <i class="mdi mdi-account mdi-24px prefix grey-text text-darken-2"></i>
+          <input type="text" id="cu_lname" name="cu_lname" maxlength="25" required>
+          <label for="cu_lname">Last Name</label>
+        </div>
+
+        <div class="input-field mx-2">
+          <i class="mdi mdi-account mdi-24px prefix grey-text text-darken-2"></i>
+          <input type="text" id="cu_ename" name="cu_ename" maxlength="25">
+          <label for="cu_ename">Extention Name</label>
+        </div>
+
+        <div class="input-field mx-2">
+          <i class="mdi mdi-cellphone-android mdi-24px prefix grey-text text-darken-2"></i>
+          <input type="text" id="cu_phonenum" name="cu_phonenum" maxlength="25">
+          <label for="cu_phonenum">Cellphone Number</label>
+        </div>
+
+        <div class="input-field mx-2">
+          <i class="mdi mdi-map-marker mdi-24px prefix grey-text text-darken-2"></i>
+          <input type="text" id="cu_address" name="cu_address" maxlength="50">
+          <label for="cu_address">Address</label>
+        </div>
+
+        <div class="row">
+          <a class="btn-small light-blue darken-4 waves-effect right" href="#additional">Continue</a>
+          <a class="btn-small btn-flat blue-text left" href="#time">Back</a>
+        </div>
+
+      </form>
+    </div>
+    <br><br>
+
+  </div>
+</div>

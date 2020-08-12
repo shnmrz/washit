@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport"
+  content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta http-equiv="Content-Security-Policy"
+  content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+  <link rel="stylesheet" type="text/css" href="assets/css/main.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="assets/sweetalert-master/themes/facebook/facebook.css">
+  <link rel="icon" href="assets/img/logo.png">
+  <title>WashIT</title>
+</head>
+
+<body>
+
+
+  <div class="login-container">
+    <div class="logo center">
+      <img src="assets/img/logo.png" width="150">
+      <h3 class="my-0 grey-text text-darken-3">WASH IT</h3>
+      <p class="my-0 grey-text text-darken-3">Tap, Clean, Deliver. We wash you wait.</p>
+    </div>
+
+    <div class="login-content">
+      <form method="POST" id="form-register">
+
+        <p class="center-align mb-5 grey-text text-darken-3">Bubbles & Clothes Register.</p>
+
+        <input type="hidden" name="task" value="verify-id">
+
+        <div class="input-field mx-2">
+          <i class="mdi mdi-email mdi-24px prefix grey-text text-darken-2"></i>
+          <input type="text" id="cu_email" name="cu_email" maxlength="25">
+          <label for="cu_email">Email</label>
+        </div>
+
+        <div class="input-field mx-2">
+          <i class="mdi mdi-account-circle mdi-24px prefix grey-text text-darken-2"></i>
+          <input type="text" id="cu_uname" name="cu_uname" maxlength="25" required>
+          <label for="cu_uname">Username</label>
+        </div>
+
+        <div class="input-field mx-2">
+          <i class="mdi mdi-lock mdi-24px prefix grey-text text-darken-2"></i>
+          <input type="password" id="cu_pass" name="cu_pass" maxlength="25" required>
+          <label for="cu_pass">Password</label>
+        </div>
+
+        <div class="input-field mt-4">
+         <button class="btn-small light-blue darken-4 waves-effect right" type="submit" name="register" id="register">Submit</button>
+         <a class="btn-small btn-flat left blue-text " href="./index.html">Login</a>
+       </div>
+     </form>
+   </div>
+ </div>
+
+ <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+ <script type="text/javascript" src="assets/sweetalert-master/dist/sweetalert.min.js"></script>
+ <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+ <script type="text/javascript" src="assets/js/validate.js"></script>
+ <script type="text/javascript" src="assets/js/validate-addon.js"></script>
+
+ <script>
+
+  $('document').ready(function()
+  { 
+    /* validation */
+    $("#form-register").validate({
+
+      errorElement: 'span',
+      errorClass: 'error-inline red-text',
+
+      });  
+
+  });
+  /* login submit */
+  function submitForm()
+  { 
+   var data = $("#form-register").serialize();
+   var name = $("#cu_uname").val();
+   $("#error").fadeOut();
+   $("#register").html('Creating..');
+
+   setTimeout(function () {
+     $.ajax({
+
+       type : 'POST',
+       url  : './backend/api.php?register',
+       data : data,
+       success :  function(response)
+       {      
+         swal("Good job" + " " + name + "!", "You have finished registration!", "success")
+         $("#form-register")[0].reset();
+         $("#register").html("Register");
+         setTimeout(()=>{
+          window.location.href = "index.html";
+        },1500)
+       }
+     });
+     return false;     
+   }, 2000);
+   else{
+    $('.err_mess').removeClass('hide');
+    setTimeout(()=>{
+      $('.err_mess').addClass('hide');
+    },8000)
+  }
+
+}
+/* login submit */
+
+</script>
+</body>
+
+</html>

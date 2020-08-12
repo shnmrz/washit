@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy"
+    content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/sweetalert/sweetalert2.css">
+    <link rel="icon" href="assets/img/logo.png">
+    <title>WashIT</title>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <div class="logo center">
+            <img src="assets/img/logo.png" width="150">
+            <h3 class="my-0 grey-text text-darken-3">WASH IT</h3>
+            <p class="my-0 grey-text text-darken-3">Tap, Clean, Deliver. We wash you wait.</p>
+        </div>
+
+        <div class="login-content">
+
+            <form class="mt-5" id="loginform">
+
+                <p class="center-align mb-5 grey-text text-darken-3">Bubbles & Clothes Login.</p>
+
+                <input type="hidden" name="task" value="verify-id">
+
+                <div class="input-field">
+                    <i class="mdi mdi-account-circle mdi-24px prefix grey-text text-darken-2"></i>
+                    <input type="text" id="username" maxlength="25" required>
+                    <label for="cu_uname">Username</label>
+                </div>
+
+                <div class="input-field">
+                    <i class="mdi mdi-lock mdi-24px prefix grey-text text-darken-2"></i>
+                    <input type="password" id="password" maxlength="25" required>
+                    <label for="cu_pass">Password</label>
+                </div>
+
+                <div class="input-field mt-4">
+                   <button class="btn-small light-blue darken-4 waves-effect right" type="submit">Login</button>
+                   <a class="btn-small btn-flat left blue-text " href="./register.html">Register</a>
+               </div>
+           </form>
+       </div>
+   </div>
+
+
+   <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+   <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+   <script type="text/javascript" src="assets/sweetalert/sweetalert2.all.js"></script>
+   <script type="text/javascript" src="backend/js/login.js"></script>
+
+</body>
+
+</html>

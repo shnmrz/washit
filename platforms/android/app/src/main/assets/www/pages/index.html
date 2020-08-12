@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport"
+  content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta http-equiv="Content-Security-Policy"
+  content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/main.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/materialize.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/mstepper.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/css/materialdesignicons.min.css" />
+  <link rel="stylesheet" href="../assets/sweetalert-master/themes/twitter/twitter.css">
+  <link rel="icon" href="../assets/img/logo.png">
+  <title>WashIT</title>
+</head>
+
+<body>
+
+  <aside class="z-depth-5 [ mobile-nav ]">
+    <ul>
+     <li>
+      <a class="btn-floating btn-large transparent z-depth-0 waves-effect waves-light" href="#home"> 
+        <i class="mdi mdi-calendar-clock"></i>
+      </a>
+    </li>
+    <li>
+      <a class="btn-floating btn-large transparent z-depth-0 waves-effect waves-light" href="#transaction"> 
+        <i class="mdi mdi-view-headline"></i> 
+      </a>
+    </li>
+    <li>
+      <a class="btn-floating btn-large transparent z-depth-0 waves-effect waves-light" href="#notification">
+        <i class="mdi mdi-bell"></i> 
+      </a>
+    </li>
+    <li>
+      <a class="btn-floating btn-large transparent z-depth-0 waves-effect waves-light" href="#aboutus">
+        <i class="mdi mdi-information-outline"></i>  
+      </a>
+    </li>
+    <li>
+      <a class="btn-floating btn-large transparent z-depth-0 waves-effect waves-light" href="#profile"> 
+        <i class="mdi mdi-account-outline"></i>
+      </a>
+    </li>
+  </ul>
+</aside>
+
+<main class="pb-5"></main>
+
+<script type="text/javascript" src="../assets/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="../assets/js/materialize.min.js"></script>
+<script type="text/javascript" src="../assets/js/mstepper.min.js"></script>
+<script type="text/javascript" src="../assets/sweetalert-master/dist/sweetalert.min.js"></script>
+<script type="text/javascript" src="../assets/js/routes.js"></script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.datepicker');
+  var instances = M.Datepicker.init(elems, options);
+});
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+</script>
+
+</body>
+
+</html>                                                                                                                                             
